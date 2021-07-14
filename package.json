@@ -1,8 +1,17 @@
 {
   "name": "react-router-vkminiapps",
   "version": "1.0.0",
-  "description": "",
+  "description": "Routing library for VK Mini Apps",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexz9/react-router-vkminiapps.git"
+  },
+  "author": "alex.z-9@ya.ru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexz9/react-router-vkminiapps/issues"
+  },
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.14.5",
@@ -20,7 +29,5 @@
     "babel": "babel src/ --out-dir dist/",
     "prepublish": "npm run babel",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }  
 }
