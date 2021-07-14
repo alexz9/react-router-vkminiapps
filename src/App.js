@@ -9,7 +9,10 @@ export const RouterContext = React.createContext();
 
 const App = (props) => {  
   try {
-    store.dispatch(routerInit(new Router(props.structure)));
+    const router = new Router(props.structure);
+    const hash = window.location.hash.slice(1);
+    router.toHash(hash)
+    store.dispatch(routerInit(router));        
   } catch (error) {
     throw new Error("Incorrect structure! Check your application structure.");
   }
