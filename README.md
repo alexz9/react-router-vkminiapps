@@ -152,24 +152,11 @@ export defalut withRouter(MyComponent);
 |settings|settings|Без разделителей. Просто конкатенация строк.|
 
 ### Загрузка приложения по нужному маршруту
-Метод toHash позволяет по хеш-ссылке сразу попасть на нужную View и Panel. Хеш должен быть валидный таблице выше.
+Метод toHash позволяет по хеш-ссылке сразу попасть на нужную View и Panel. Хеш должен быть валидный таблице выше. При инициализации библиотека сама пытается прочитать hash из урла и сопоставить с нужным маршрутом для перенаправления.
 
 ```js
-import React from 'react';
-
-class App extends React.Component{
-  componentDidMount(){
-    const hash = window.location.hash.slice(1); // убираем решетку с хеша
-    this.props.router.toHash(hash);
-  }
-  render(){
-    <Root>
-     ...
-    </Root>
-  }
-}
-
-export default withRouter(App);
+const hash = window.location.hash.slice(1);
+router.toHash(hash);
 ```
 
 ## License
