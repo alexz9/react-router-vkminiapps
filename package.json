@@ -1,6 +1,6 @@
 {
   "name": "react-router-vkminiapps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Routing library for VK Mini Apps",
   "main": "dist/index.js",
   "repository": {
@@ -29,5 +29,5 @@
     "babel": "babel src/ --out-dir dist/",
     "prepublish": "npm run babel",
     "test": "echo \"Error: no test specified\" && exit 1"
-  }  
+  }
 }
