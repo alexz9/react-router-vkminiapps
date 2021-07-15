@@ -98,11 +98,7 @@ class Router {
       this.hash = hash;
     }       
   }
-  toHash(value) {
-    const hash = value.replace(/[^a-zA-Z-/]/g, "");
-    if (!hash){
-      return;
-    }
+  toHash(hash) {    
     const { structure } = this;
     for (let i = 0; i < structure.length; i++) {
       for (let k = 0; k < structure[i].panels.length; k++) {
