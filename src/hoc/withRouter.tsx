@@ -5,9 +5,9 @@ import { toPopout, toModal, toView, toPanel, toBack, toHash } from '../store/act
 import { RouterContext } from '../components/App';
 import { IAppState } from '../types/store';
 
-function withRouter<T>(Component: T) {
-  const Connection = (props: {}) => {
-    // @ts-ignore
+function withRouter<T>(Component: React.ComponentType<T>) {
+  const Connection = (props: T) => {
+    
     return <Component {...props} />
   }
   return connect(mapStateToProps, mapDispatchToProps, mergeProps, { context: RouterContext })(Connection);
