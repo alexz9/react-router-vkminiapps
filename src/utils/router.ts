@@ -149,12 +149,15 @@ class Router implements IRouter {
   }
   resetHistory(){
     // история панелей
+    let counter = 0;
     for(let key in this.historyPanels){
+      counter += this.historyPanels[key].length - 1;
       this.historyPanels[key] = this.historyPanels[key].slice(0, 1);
     }
+    this.views[this.activeView].panel = this.historyPanels[this.activeView][this.historyPanels[this.activeView].length - 1];
     // история views
     this.historyViews = [this.views[this.activeView]];
-    window.history.go(-(window.history.length - 1));
+    window.history.go(-counter);
   }
 }
 
