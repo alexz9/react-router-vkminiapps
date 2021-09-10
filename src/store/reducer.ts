@@ -41,6 +41,9 @@ export default function app(state: IAppState = initialState, action: TActions) {
     case EActionTypes.ROUTER_INIT:
       router = action.payload;
       return { ...state, activeView: router.getActiveView(), activePanel: router.getActivePanel() };
+    case EActionTypes.ROUTER_RESET_HISTORY:
+      router.resetHistory();
+      return state;
     default:
       return state;
   }

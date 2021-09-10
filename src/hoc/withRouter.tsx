@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { toPopout, toModal, toView, toPanel, toBack, toHash } from '../store/actions';
+import { toPopout, toModal, toView, toPanel, toBack, toHash, resetHistory } from '../store/actions';
 import { RouterContext } from '../components/App';
 import { IAppState } from '../types/store';
 
@@ -18,7 +18,7 @@ function mapStateToProps(state: IAppState) {
 }
 function mapDispatchToProps(dispatch: any) {
   return {
-    ...bindActionCreators({ toPopout, toModal, toView, toPanel, toBack, toHash }, dispatch)
+    ...bindActionCreators({ toPopout, toModal, toView, toPanel, toBack, toHash, resetHistory }, dispatch)
   };
 }
 function mergeProps(stateProps: IAppState, dispatchProps: any, ownProps: any) {

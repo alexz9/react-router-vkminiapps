@@ -18,6 +18,7 @@ export interface IRouter {
   setActivePanel(id: IPanel['id']): void
   back(): void
   toHash(hash: string): void
+  resetHistory():void
 }
 
 class Router implements IRouter {
@@ -145,6 +146,15 @@ class Router implements IRouter {
         }
       }
     }
+  }
+  resetHistory(){
+    // история панелей
+    for(let key in this.historyPanels){
+      this.historyPanels[key] = this.historyPanels[key].slice(0, 1);
+    }
+    // история views
+    this.historyViews = [this.views[this.activeView]];
+    window.history.go(-(window.history.length - 1));
   }
 }
 

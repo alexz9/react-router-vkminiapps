@@ -1,4 +1,4 @@
-import { EActionTypes, IrouterInit, ItoHash, ItoModal, ItoPanel, ItoPopout, ItoView, TActions } from '../types/store';
+import { EActionTypes, IresetHistory, IrouterInit, ItoHash, ItoModal, ItoPanel, ItoPopout, ItoView, TActions } from '../types/store';
 
 export const toPopout = function (payload: ItoPopout['payload']): TActions {
   return {
@@ -39,5 +39,10 @@ export const routerInit = function (payload: IrouterInit['payload']): TActions {
   return {
     type: EActionTypes.ROUTER_INIT,
     payload
+  }
+};
+export const resetHistory = function (): TActions {
+  return {
+    type: EActionTypes.ROUTER_RESET_HISTORY   
   }
 };
