@@ -3,7 +3,7 @@ import { IRouter } from "../utils/router";
 import { IPanel, IView } from "./app";
 
 export interface IAppState{
-  popout: null | ReactNode
+  popout: any
   modal: any,
   activeView: string,
   activePanel: string,
@@ -23,7 +23,7 @@ export enum EActionTypes{
 
 export interface ItoPopout{
   type: EActionTypes.ROUTER_TO_POPOUT
-  payload: null | ReactNode
+  payload: any
 }
 
 export interface ItoModal{

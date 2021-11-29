@@ -22,7 +22,7 @@ export interface IRouter {
 }
 
 class Router implements IRouter {
-  structure: IRouter['structure']
+  readonly structure: IRouter['structure']
   hash: IRouter['hash']
   activeView: IRouter['activeView']
   activePanel: IRouter['activePanel']
@@ -128,7 +128,10 @@ class Router implements IRouter {
   }
   toHash(hash: IRouter['hash']) {
     const { structure } = this;
-    for (let i = 0; i < structure.length; i++) {
+    if(!hash.trim()){
+      return;
+    }   
+    loop: for (let i = 0; i < structure.length; i++) {
       for (let k = 0; k < structure[i].panels.length; k++) {
         const h = getHashUrl(structure[i].hash, structure[i].panels[k].hash);
         // хеш подходит под заданную структуру, меняем состояние активных вивок и панелей
@@ -141,8 +144,8 @@ class Router implements IRouter {
           if (k > 0) {
             this.historyPanels[this.activeView].push(structure[i].panels[k]);
             window.history.pushState({ route: this.activePanel }, this.activePanel);
-          }
-          break;
+          }          
+          break loop;
         }
       }
     }

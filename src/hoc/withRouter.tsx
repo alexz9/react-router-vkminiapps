@@ -6,7 +6,7 @@ import { RouterContext } from '../components/App';
 import { IAppState } from '../types/store';
 
 function withRouter<T>(Component: React.ComponentType<T>) {
-  const Connection = (props: T) => {
+  const Connection = (props: any) => {
     
     return <Component {...props} />
   }
