@@ -1,4 +1,4 @@
-import { EActionTypes, IresetHistory, IrouterInit, ItoHash, ItoModal, ItoPanel, ItoPopout, ItoView, TActions } from '../types/store';
+import { EActionTypes, IrouterInit, ItoHash, ItoModal, ItoPanel, ItoPopout, ItoView, TActions } from '../../types/store';
 
 export const toPopout = function (payload: ItoPopout['payload']): TActions {
   return {
