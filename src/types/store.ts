@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { IRouter } from "../utils/router";
 import { IPanel, IView } from "./app";
 
@@ -59,10 +58,3 @@ export interface IresetHistory{
 }
 
 export type TActions = ItoPopout | ItoModal | ItoView | ItoPanel | ItoBack | ItoHash | IrouterInit | IresetHistory;
-
-
-
-
-
-
-
