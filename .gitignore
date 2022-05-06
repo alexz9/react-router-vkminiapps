@@ -14,7 +14,6 @@
 
 # for npm
 /lib
-/dist
 
 # misc
 .DS_Store

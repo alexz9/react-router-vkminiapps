@@ -48,5 +48,3 @@ export default function app(state: IAppState = initialState, action: TActions) {
       return state;
   }
 }
-
-export type RootState = ReturnType<typeof app>

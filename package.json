@@ -35,7 +35,8 @@
   "scripts": {
     "babel": "babel src/ --out-dir dist/ --extensions .tsx,.jsx,.ts,.js",
     "tsc-dev": "tsc --emitDeclarationOnly --declaration --outDir dist/ --preserveWatchOutput",
-    "prepublish": "npm run babel",
+    "build": "npm run babel & npm run tsc-dev",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
