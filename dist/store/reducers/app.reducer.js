@@ -22,7 +22,7 @@ var initialState = {
   activePanel: "",
   hash: ""
 };
-var router = {};
+var router;
 
 function app() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -45,23 +45,23 @@ function app() {
       router.setActiveView(action.payload);
       return _objectSpread(_objectSpread({}, state), {}, {
         activeView: action.payload,
-        activePanel: router.getActivePanel(),
-        hash: router.getHash()
+        activePanel: router.activePanel,
+        hash: router.hash
       });
 
     case _store.EActionTypes.ROUTER_TO_PANEL:
       router.setActivePanel(action.payload);
       return _objectSpread(_objectSpread({}, state), {}, {
         activePanel: action.payload,
-        hash: router.getHash()
+        hash: router.hash
       });
 
     case _store.EActionTypes.ROUTER_TO_BACK:
       router.back();
       return _objectSpread(_objectSpread({}, state), {}, {
-        activeView: router.getActiveView(),
-        activePanel: router.getActivePanel(),
-        hash: router.getHash(),
+        activeView: router.activeView,
+        activePanel: router.activePanel,
+        hash: router.hash,
         modal: null,
         popout: null
       });
@@ -70,15 +70,15 @@ function app() {
       router.toHash(action.payload);
       return _objectSpread(_objectSpread({}, state), {}, {
         hash: action.payload,
-        activeView: router.getActiveView(),
-        activePanel: router.getActivePanel()
+        activeView: router.activeView,
+        activePanel: router.activePanel
       });
 
     case _store.EActionTypes.ROUTER_INIT:
       router = action.payload;
       return _objectSpread(_objectSpread({}, state), {}, {
-        activeView: router.getActiveView(),
-        activePanel: router.getActivePanel()
+        activeView: router.activeView,
+        activePanel: router.activePanel
       });
 
     case _store.EActionTypes.ROUTER_RESET_HISTORY:

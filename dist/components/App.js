@@ -42,9 +42,14 @@ var App = function App(_ref) {
   }
 
   (0, _react.useEffect)(function () {
-    window.addEventListener("popstate", function () {
+    var back = function back() {
       return _store["default"].dispatch((0, _app.toBack)());
-    });
+    };
+
+    window.addEventListener("popstate", back);
+    return function () {
+      return window.removeEventListener("popstate", back);
+    };
   }, []);
   return /*#__PURE__*/_react["default"].createElement(_reactRedux.Provider, {
     store: _store["default"],
