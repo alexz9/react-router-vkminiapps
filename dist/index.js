@@ -17,7 +17,23 @@ Object.defineProperty(exports, "default", {
     return _App["default"];
   }
 });
+Object.defineProperty(exports, "useRouterSelector", {
+  enumerable: true,
+  get: function get() {
+    return _useRouterSelector.useRouterSelector;
+  }
+});
+Object.defineProperty(exports, "useRouterActions", {
+  enumerable: true,
+  get: function get() {
+    return _useRouterActions.useRouterActions;
+  }
+});
 
 var _withRouter = _interopRequireDefault(require("./hoc/withRouter"));
 
 var _App = _interopRequireDefault(require("./components/App"));
+
+var _useRouterSelector = require("./hooks/useRouterSelector");
+
+var _useRouterActions = require("./hooks/useRouterActions");
