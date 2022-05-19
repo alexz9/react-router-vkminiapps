@@ -29,4 +29,3 @@ const RouterProvider = ({ structure, children }) => {
     return ((0, jsx_runtime_1.jsx)(store_1.default.Provider, Object.assign({ value: { state, dispatch } }, { children: children })));
 };
 exports.default = RouterProvider;
-//# sourceMappingURL=RouterProvider.js.map

@@ -16,4 +16,3 @@ function withRouter(Component) {
     };
 }
 exports.default = withRouter;
-//# sourceMappingURL=withRouter.js.map

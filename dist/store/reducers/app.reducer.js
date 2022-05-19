@@ -41,4 +41,3 @@ function app(state = exports.initialState, action) {
     }
 }
 exports.default = app;
-//# sourceMappingURL=app.reducer.js.map

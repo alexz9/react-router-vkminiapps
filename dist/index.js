@@ -14,4 +14,3 @@ var useRouterSelector_1 = require("./hooks/useRouterSelector");
 Object.defineProperty(exports, "useRouterSelector", { enumerable: true, get: function () { return useRouterSelector_1.useRouterSelector; } });
 var useRouterActions_1 = require("./hooks/useRouterActions");
 Object.defineProperty(exports, "useRouterActions", { enumerable: true, get: function () { return useRouterActions_1.useRouterActions; } });
-//# sourceMappingURL=index.js.map

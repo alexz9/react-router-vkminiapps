@@ -12,4 +12,3 @@ var EActionTypes;
     EActionTypes["ROUTER_INIT"] = "ROUTER/INIT";
     EActionTypes["ROUTER_RESET_HISTORY"] = "ROUTER/RESET_HISTORY";
 })(EActionTypes = exports.EActionTypes || (exports.EActionTypes = {}));
-//# sourceMappingURL=store.js.map

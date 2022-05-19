@@ -26,4 +26,3 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const app = __importStar(require("./app.actions"));
 const actions = Object.assign({}, app);
 exports.default = actions;
-//# sourceMappingURL=index.js.map

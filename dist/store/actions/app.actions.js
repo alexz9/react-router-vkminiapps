@@ -56,4 +56,3 @@ const resetHistory = function () {
     };
 };
 exports.resetHistory = resetHistory;
-//# sourceMappingURL=app.actions.js.map

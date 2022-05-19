@@ -143,4 +143,3 @@ _Router_hash = new WeakMap(), _Router_activeView = new WeakMap(), _Router_active
 };
 ;
 exports.default = Router;
-//# sourceMappingURL=router.js.map

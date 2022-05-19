@@ -7,4 +7,3 @@ function getHashUrl(viewHash = "", panelHash = "") {
     return viewHash + panelHash;
 }
 exports.default = getHashUrl;
-//# sourceMappingURL=getHashUrl.js.map

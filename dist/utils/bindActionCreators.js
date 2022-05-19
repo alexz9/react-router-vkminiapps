@@ -22,4 +22,3 @@ function bindActionCreators(actionCreators, dispatch) {
     return boundActionCreators;
 }
 exports.default = bindActionCreators;
-//# sourceMappingURL=bindActionCreators.js.map

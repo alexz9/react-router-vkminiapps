@@ -7,4 +7,3 @@ const AppContext = (0, react_1.createContext)({
     dispatch: () => null
 });
 exports.default = AppContext;
-//# sourceMappingURL=index.js.map
