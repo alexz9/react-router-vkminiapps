@@ -7,14 +7,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.useRouterActions = void 0;
 
-var _reactRedux = require("react-redux");
-
 var _redux = require("redux");
+
+var _store = _interopRequireDefault(require("../store"));
 
 var _actions = _interopRequireDefault(require("../store/actions"));
 
 var useRouterActions = function useRouterActions() {
-  var dispatch = (0, _reactRedux.useDispatch)();
+  var dispatch = _store["default"].dispatch;
   return (0, _redux.bindActionCreators)(_actions["default"], dispatch);
 };
 

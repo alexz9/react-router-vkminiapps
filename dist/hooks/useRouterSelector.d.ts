@@ -1,3 +1,1 @@
-import { TypedUseSelectorHook } from "react-redux";
-import { RootState } from "../store/reducers";
-export declare const useRouterSelector: TypedUseSelectorHook<RootState>;
+export declare const useRouterSelector: () => import("../types/store").IAppState;
