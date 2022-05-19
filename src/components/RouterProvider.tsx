@@ -7,25 +7,27 @@ import reducer from "../store/reducers";
 import { initialState } from "../store/reducers/app.reducer";
 
 interface RouterProps {
-  structure: IStructure,
+  structure: IStructure
   children: ReactNode
 }
 
-export const RouterProvider: React.FC<RouterProps> = ({ structure, children }) => {
+const RouterProvider: React.FC<RouterProps> = ({ structure, children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  try {
-    const router = new Router(structure);
-    const hash = window.location.hash.slice(1);
-    router.toHash(hash)
-    dispatch(routerInit(router));
-  } catch (error) {
-    throw new Error("Incorrect structure! Check your application structure.");
-  }
+
   useEffect(() => {
+    try {
+      const router = new Router(structure);
+      const hash = window.location.hash.slice(1);
+      router.toHash(hash)
+      dispatch(routerInit(router));
+    } catch (error) {
+      throw new Error("Incorrect structure! Check your application structure.");
+    }
     const back = () => dispatch(toBack());
     window.addEventListener("popstate", back);
     return () => window.removeEventListener("popstate", back);
   }, []);
+  
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       {children}

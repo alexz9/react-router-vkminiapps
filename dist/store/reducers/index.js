@@ -1,13 +1,8 @@
 "use strict";
-
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-
-var _app = _interopRequireDefault(require("./app.reducer"));
-
-var _default = _app["default"];
-exports["default"] = _default;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const app_reducer_1 = __importDefault(require("./app.reducer"));
+exports.default = app_reducer_1.default;
+//# sourceMappingURL=index.js.map

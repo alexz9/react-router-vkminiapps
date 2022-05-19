@@ -43,13 +43,10 @@ class Router {
     const panel = this.#views[id].panel;
     this.#activeView = id;
     this.#activePanel = panel.id;
-    this.#historyViews.push(this.#views[id]);
-    const hash = getHashUrl(this.#views[id].hash, panel.hash);
+    this.#historyViews.push(this.#views[id]);    
     window.history.pushState({ route: id }, id);
-    if (this.#hash !== hash) {
-      bridge.send("VKWebAppSetLocation", { location: hash });
-      this.#hash = hash;
-    }
+    const hash = getHashUrl(this.#views[id].hash, panel.hash);
+    this.#setLocationHash(hash);
   }
 
   setActivePanel(panel: IPanel["id"]) {
@@ -59,13 +56,10 @@ class Router {
       panel: this.#views[this.#activeView].panels[index] 
     };
     this.#activePanel = panel;
-    this.#historyPanels[this.#activeView].push(this.#views[this.#activeView].panel);
-    const hash = getHashUrl(this.#views[this.#activeView].hash, this.#views[this.#activeView].panel.hash);
+    this.#historyPanels[this.#activeView].push(this.#views[this.#activeView].panel);    
     window.history.pushState({ route: panel }, panel);
-    if (this.#hash !== hash) {
-      bridge.send("VKWebAppSetLocation", { location: hash });
-      this.#hash = hash;
-    }
+    const hash = getHashUrl(this.#views[this.#activeView].hash, this.#views[this.#activeView].panel.hash);
+    this.#setLocationHash(hash);
   }
 
   back() {
@@ -85,10 +79,7 @@ class Router {
       this.#activePanel = this.#views[this.#activeView].panel.id;
     }
     const hash = getHashUrl(this.#views[this.#activeView].hash, this.#views[this.#activeView].panel.hash);
-    if (this.#hash !== hash) {
-      bridge.send("VKWebAppSetLocation", { location: hash });
-      this.#hash = hash;
-    }
+    this.#setLocationHash(hash);
   }
 
   toHash(hash: string) {
@@ -139,6 +130,13 @@ class Router {
 
   get hash() {
     return this.#hash;
+  }
+
+  #setLocationHash(hash: string){
+    if (this.#hash !== hash) {     
+      bridge.send("VKWebAppSetLocation", { location: hash });
+      this.#hash = hash;
+    }
   }
 }
 

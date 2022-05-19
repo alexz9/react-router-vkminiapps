@@ -1,78 +1,59 @@
 "use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.resetHistory = exports.routerInit = exports.toHash = exports.toBack = exports.toModal = exports.toPanel = exports.toView = exports.toPopout = void 0;
-
-var _store = require("../../types/store");
-
-var toPopout = function toPopout(payload) {
-  return {
-    type: _store.EActionTypes.ROUTER_TO_POPOUT,
-    payload: payload
-  };
+const store_1 = require("../../types/store");
+const toPopout = function (payload) {
+    return {
+        type: store_1.EActionTypes.ROUTER_TO_POPOUT,
+        payload
+    };
 };
-
 exports.toPopout = toPopout;
-
-var toView = function toView(payload) {
-  return {
-    type: _store.EActionTypes.ROUTER_TO_VIEW,
-    payload: payload
-  };
+const toView = function (payload) {
+    return {
+        type: store_1.EActionTypes.ROUTER_TO_VIEW,
+        payload
+    };
 };
-
 exports.toView = toView;
-
-var toPanel = function toPanel(payload) {
-  return {
-    type: _store.EActionTypes.ROUTER_TO_PANEL,
-    payload: payload
-  };
+const toPanel = function (payload) {
+    return {
+        type: store_1.EActionTypes.ROUTER_TO_PANEL,
+        payload
+    };
 };
-
 exports.toPanel = toPanel;
-
-var toModal = function toModal(payload) {
-  return {
-    type: _store.EActionTypes.ROUTER_TO_MODAL,
-    payload: payload
-  };
+const toModal = function (payload) {
+    return {
+        type: store_1.EActionTypes.ROUTER_TO_MODAL,
+        payload
+    };
 };
-
 exports.toModal = toModal;
-
-var toBack = function toBack() {
-  return {
-    type: _store.EActionTypes.ROUTER_TO_BACK
-  };
+const toBack = function () {
+    return {
+        type: store_1.EActionTypes.ROUTER_TO_BACK
+    };
 };
-
 exports.toBack = toBack;
-
-var toHash = function toHash(payload) {
-  return {
-    type: _store.EActionTypes.ROUTER_TO_HASH,
-    payload: payload
-  };
+const toHash = function (payload) {
+    return {
+        type: store_1.EActionTypes.ROUTER_TO_HASH,
+        payload
+    };
 };
-
 exports.toHash = toHash;
-
-var routerInit = function routerInit(payload) {
-  return {
-    type: _store.EActionTypes.ROUTER_INIT,
-    payload: payload
-  };
+const routerInit = function (payload) {
+    return {
+        type: store_1.EActionTypes.ROUTER_INIT,
+        payload
+    };
 };
-
 exports.routerInit = routerInit;
-
-var resetHistory = function resetHistory() {
-  return {
-    type: _store.EActionTypes.ROUTER_RESET_HISTORY
-  };
+const resetHistory = function () {
+    return {
+        type: store_1.EActionTypes.ROUTER_RESET_HISTORY
+    };
 };
-
 exports.resetHistory = resetHistory;
+//# sourceMappingURL=app.actions.js.map

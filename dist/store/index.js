@@ -1,19 +1,10 @@
 "use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
+Object.defineProperty(exports, "__esModule", { value: true });
+const react_1 = require("react");
+const app_reducer_1 = require("./reducers/app.reducer");
+const AppContext = (0, react_1.createContext)({
+    state: app_reducer_1.initialState,
+    dispatch: () => null
 });
-exports["default"] = void 0;
-
-var _react = require("react");
-
-var _app = require("./reducers/app.reducer");
-
-var AppContext = /*#__PURE__*/(0, _react.createContext)({
-  state: _app.initialState,
-  dispatch: function dispatch() {
-    return null;
-  }
-});
-var _default = AppContext;
-exports["default"] = _default;
+exports.default = AppContext;
+//# sourceMappingURL=index.js.map

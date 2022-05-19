@@ -11,30 +11,19 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alexz9/react-router-vkminiapps/issues"
-  },  
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "@vkontakte/vk-bridge": "^2.6.1"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.14.6",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
-    "@babel/plugin-transform-runtime": "^7.14.5",
-    "@babel/preset-env": "^7.14.7",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.15.0",
-    "@types/jest": "^27.0.1",
     "@types/node": "^16.7.10",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
-    "@vkontakte/vk-bridge": "^2.4.4",
-    "react": "^17.0.2",
-    "react-redux": "^7.2.4",
     "typescript": "^4.6.4"
   },
   "scripts": {
-    "babel": "babel src/ --out-dir dist/ --extensions .tsx,.jsx,.ts,.js",
-    "tsc-dev": "tsc",
-    "build": "npm run babel & npm run tsc-dev",
-    "prepublish": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rmdir /s /q dist & tsc",
+    "prepublish": "npm run build"    
   }
 }

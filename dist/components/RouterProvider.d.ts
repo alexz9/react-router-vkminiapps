@@ -4,5 +4,5 @@ interface RouterProps {
     structure: IStructure;
     children: ReactNode;
 }
-export declare const RouterProvider: React.FC<RouterProps>;
+declare const RouterProvider: React.FC<RouterProps>;
 export default RouterProvider;
