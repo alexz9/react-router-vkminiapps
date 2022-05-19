@@ -16,7 +16,7 @@ const App: React.FC<RouterProps> = ({ structure, children }) => {
   try {
     const router = new Router(structure);
     const hash = window.location.hash.slice(1);
-    router.toHash(hash)
+    router.toHash(hash);
     store.dispatch(routerInit(router));
   } catch (error) {
     throw new Error("Incorrect structure! Check your application structure.");
