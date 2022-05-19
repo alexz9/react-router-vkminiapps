@@ -4,7 +4,7 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "ES6"
+      "ES2015"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -13,17 +13,18 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "CommonJS",
-    "moduleResolution": "Node",
+    "module": "ES6",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     // "noEmit": true,
-    "jsx": "react-jsx",
-    // Ensure that .d.ts files are created by tsc, but not .js files
+    "jsx": "react-jsx",    
     "declaration": true,
     "emitDeclarationOnly": true,
+    "outDir": "dist"
   },
   "include": [
     "src"
-  ]
+  ],
+  "exclude": ["node_modules", "dist"]
 }
