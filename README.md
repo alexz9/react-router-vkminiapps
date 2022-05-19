@@ -69,6 +69,7 @@ export default structure;
 Подключаем компонент RouterProvider из библиотеки, оборачиваем в него App, и в качестве props передаем structure.
 
 ```js
+// index.tsx
 import { RouterProvider } from 'react-router-vkminiapps';
 import structure from './structure';
 import App from './App';
@@ -84,6 +85,7 @@ ReactDOM.render(app, document.getElementById("root"));
 Используем hoc или hooks для доступа к управлению и чтению маршрутов.
 
 ```js
+// App.tsx
 import { withRouter, useRouterSelector, useRouterActions } from 'react-router-vkminiapps';
 import { ViewTypes, PanelTypes } from './structure';
 
