@@ -10,13 +10,13 @@ export interface IAppState{
 }
 
 export enum EActionTypes{
-  ROUTER_TO_POPOUT = 'ROUTER/TO_POPOUT',
-  ROUTER_TO_MODAL = 'ROUTER/TO_MODAL',
-  ROUTER_TO_VIEW = 'ROUTER/TO_VIEW',
-  ROUTER_TO_PANEL = 'ROUTER/TO_PANEL',
-  ROUTER_TO_BACK = 'ROUTER/TO_BACK',
-  ROUTER_TO_HASH = 'ROUTER/TO_HASH',
-  ROUTER_INIT = 'ROUTER/INIT',
+  ROUTER_TO_POPOUT = "ROUTER/TO_POPOUT",
+  ROUTER_TO_MODAL = "ROUTER/TO_MODAL",
+  ROUTER_TO_VIEW = "ROUTER/TO_VIEW",
+  ROUTER_TO_PANEL = "ROUTER/TO_PANEL",
+  ROUTER_TO_BACK = "ROUTER/TO_BACK",
+  ROUTER_TO_HASH = "ROUTER/TO_HASH",
+  ROUTER_INIT = "ROUTER/INIT",
   ROUTER_RESET_HISTORY = "ROUTER/RESET_HISTORY"
 }
 
@@ -57,4 +57,4 @@ export interface IresetHistory{
   type: EActionTypes.ROUTER_RESET_HISTORY
 }
 
-export type TActions = ItoPopout | ItoModal | ItoView | ItoPanel | ItoBack | ItoHash | IrouterInit | IresetHistory;
+export type IActions = ItoPopout | ItoModal | ItoView | ItoPanel | ItoBack | ItoHash | IrouterInit | IresetHistory;

@@ -1,5 +1,5 @@
 import { IRouter } from "../../utils/router";
-import { EActionTypes, IAppState, TActions } from "../../types/store";
+import { EActionTypes, IAppState, IActions } from "../../types/store";
 
 const initialState: IAppState = {
   popout: null,
@@ -11,7 +11,7 @@ const initialState: IAppState = {
 
 let router: IRouter;
 
-export default function app(state: IAppState = initialState, action: TActions) {  
+export default function app(state: IAppState = initialState, action: IActions) {  
   switch (action.type) {
     case EActionTypes.ROUTER_TO_POPOUT:
       router.setModal();
