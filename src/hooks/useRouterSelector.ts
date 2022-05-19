@@ -1,7 +1,7 @@
-import { useMemo } from "react";
-import store from "../store";
+import { useContext } from "react";
+import AppContext from "../store";
 
 export const useRouterSelector = () => {
-  const state = useMemo(() => store.getState(), [store.getState()]);
+  const { state } = useContext(AppContext);
   return state;
-}
+};

@@ -1,0 +1,1 @@
+{"version":3,"file":"useRouterSelector.js","sourceRoot":"","sources":["../../src/hooks/useRouterSelector.ts"],"names":[],"mappings":";;;;;;AAAA,iCAAmC;AACnC,qDAAkC;AAE3B,MAAM,iBAAiB,GAAG,GAAG,EAAE;IACpC,MAAM,EAAE,KAAK,EAAE,GAAG,IAAA,kBAAU,EAAC,eAAU,CAAC,CAAC;IACzC,OAAO,KAAK,CAAC;AACf,CAAC,CAAC;AAHW,QAAA,iBAAiB,qBAG5B"}

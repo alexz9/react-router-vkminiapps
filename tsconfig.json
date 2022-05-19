@@ -13,14 +13,13 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "ES6",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    // "noEmit": true,
+    "sourceMap": false,  
     "jsx": "react-jsx",    
-    "declaration": true,
-    "emitDeclarationOnly": true,
+    "declaration": true,    
     "outDir": "dist"
   },
   "include": [

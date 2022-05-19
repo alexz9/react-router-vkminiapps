@@ -1,6 +1,14 @@
-import { createStore } from 'redux';
-import reducer from './reducers';
+import { createContext, Dispatch } from "react";
+import { IActions } from "../types/store";
+import { RootState } from "./reducers";
+import { initialState } from "./reducers/app.reducer";
 
-const store = createStore(reducer);
+const AppContext = createContext<{
+  state: RootState;
+  dispatch: Dispatch<IActions>
+}>({
+  state: initialState,
+  dispatch: () => null
+});
 
-export default store;
+export default AppContext;
