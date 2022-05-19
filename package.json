@@ -12,14 +12,14 @@
   "bugs": {
     "url": "https://github.com/alexz9/react-router-vkminiapps/issues"
   },
-  "dependencies": {
-    "react": "^17.0.2",
+  "dependencies": {    
     "@vkontakte/vk-bridge": "^2.6.1"
   },
   "devDependencies": {
     "@types/node": "^16.7.10",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
     "typescript": "^4.6.4"
   },
   "scripts": {
