@@ -1,7 +1,7 @@
 import { IRouter } from "../../utils/router";
 import { EActionTypes, IAppState, IActions } from "../../types/store";
 
-const initialState: IAppState = {
+export const initialState: IAppState = {
   popout: null,
   modal: null,
   activeView: "",

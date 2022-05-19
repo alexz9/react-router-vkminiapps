@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = app;
+exports.initialState = void 0;
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -22,6 +23,7 @@ var initialState = {
   activePanel: "",
   hash: ""
 };
+exports.initialState = initialState;
 var router;
 
 function app() {

@@ -47,4 +47,4 @@ export interface IrouterInit {
 export interface IresetHistory {
     type: EActionTypes.ROUTER_RESET_HISTORY;
 }
-export declare type TActions = ItoPopout | ItoModal | ItoView | ItoPanel | ItoBack | ItoHash | IrouterInit | IresetHistory;
+export declare type IActions = ItoPopout | ItoModal | ItoView | ItoPanel | ItoBack | ItoHash | IrouterInit | IresetHistory;

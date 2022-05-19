@@ -1,2 +1,3 @@
-import { IAppState, TActions } from "../../types/store";
-export default function app(state: IAppState | undefined, action: TActions): IAppState;
+import { IAppState, IActions } from "../../types/store";
+export declare const initialState: IAppState;
+export default function app(state: IAppState | undefined, action: IActions): IAppState;

@@ -1,8 +1,9 @@
-import { useDispatch } from "react-redux"
-import { bindActionCreators } from "redux";
+import { useContext, useMemo } from "react";
+import { bindActionCreators, Dispatch } from "redux";
+import AppContext from "../store";
 import actions from "../store/actions";
 
 export const useRouterActions = () => {
-  const dispatch = useDispatch();
-  return bindActionCreators(actions, dispatch);
+  const { dispatch } = useContext(AppContext);
+  return useMemo(() => bindActionCreators(actions, dispatch as Dispatch), []);
 }
